@@ -3,7 +3,7 @@ some common problems when install R packages in conda environment
 
 1. install package 'ragg' in conda-based R
 Error log:
-  * installing *source* package 'ragg' ...
+  installing *source* package 'ragg' ...
   ** package 'ragg' successfully unpacked and MD5 sums checked
   staged installation is only possible with locking
   ** using non-staged installation
@@ -12,9 +12,9 @@ Error log:
   Using PKG_LIBS=-L/build/libjpeg-turbo-6HlDLQ/libjpeg-turbo-2.0.3/obj-x86_64-linux-gnu/lib/x86_64-linux-gnu -lfreetype -lpng16 -lz -ltiff -ljpeg -ljpeg
   -----------------------------[ ANTICONF ]-------------------------------
   Configuration failed to find one of freetype2 libpng libtiff-4 libjpeg. Try installing:
-   * deb: libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev (Debian, Ubuntu, etc)
-   * rpm: freetype-devel libpng-devel libtiff-devel libjpeg-turbo-devel (Fedora, CentOS, RHEL)
-   * csw: libfreetype_dev libpng16_dev libtiff_dev libjpeg_dev (Solaris)
+    deb: libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev (Debian, Ubuntu, etc)
+    rpm: freetype-devel libpng-devel libtiff-devel libjpeg-turbo-devel (Fedora, CentOS, RHEL)
+    csw: libfreetype_dev libpng16_dev libtiff_dev libjpeg_dev (Solaris)
   If freetype2 libpng libtiff-4 libjpeg is already installed, check that 'pkg-config' is in your
   PATH and PKG_CONFIG_PATH contains a freetype2 libpng libtiff-4 libjpeg.pc file. If pkg-config
   is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
