@@ -1,8 +1,10 @@
 # R-conda-problems
 some common problems when install R packages in conda environment
 
-1. install package 'ragg' in conda-based R
-Error log:
+** 1. install package 'ragg' in conda-based R **
+
+- Error log:
+  ```
   installing *source* package 'ragg' ...
   ** package 'ragg' successfully unpacked and MD5 sums checked
   staged installation is only possible with locking
@@ -37,11 +39,12 @@ Error log:
                    from <stdin>:2:
   /usr/include/x86_64-linux-gnu/bits/stdio2.h:228:17: error: missing binary operator before token "("
     228 | #if __GLIBC_USE (DEPRECATED_GETS)
-
-Solutions:
+  ```
+- Solutions:
+  ```
   install.packages("ragg", configure.vars=c("INCLUDE_DIR=/usr/include/freetype2 LIB_DIR=/usr/lib/x86_64-linux-gnu/pkgconfig/"))
-  install.packages("ragg", configure.vars = c("INCLUDE_DIR=/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu LIB_DIR=/usr/lib/x86_64-linux-gnu/pkgconfig/")) # add more include dir, add '-I' for the second or later dir 
-  
-  refer to: https://stackoverflow.com/questions/53324885/how-to-include-more-paths-under-include-dir-in-configure-vars-argument-in-instal
+  install.packages("ragg", configure.vars = c("INCLUDE_DIR=/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu LIB_DIR=/usr/lib/x86_64-linux-gnu/pkgconfig/")) # add more include dir, add prefix '-I' for the second or later dir 
+  ```
+  refer to [stackoverflow](https://stackoverflow.com/questions/53324885/how-to-include-more-paths-under-include-dir-in-configure-vars-argument-in-instal)
  
- 2. waiting for more
+ ** 2. waiting for more **
